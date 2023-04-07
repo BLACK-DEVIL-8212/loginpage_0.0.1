@@ -1,0 +1,12 @@
+{
+  "name": "loginpage",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "dev" : "node server"
+  },
+  "author": "BLACK-DEVIL-8212",
+  "license": "ISC"
+}
