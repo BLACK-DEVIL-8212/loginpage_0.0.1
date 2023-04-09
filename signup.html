@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none) {
+            .wp-block-image.is-style-circle-mask img {
+                -webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');
+                mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');
+                mask-mode:alpha;
+                -webkit-mask-repeat:no-repeat;
+                mask-repeat:no-repeat;
+                -webkit-mask-size:contain;
+                mask-size:contain;
+                -webkit-mask-position:center;
+                mask-position:center;
+                border-radius:0
+            }
+        }
+    body{
+        background-color: black  ;
+        color: aquamarine;
+    }
+
+    *{
+        box-sizing: border-box; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .container{
+        overflow: -moz-hidden-unscrollable;
+        box-sizing: border-box;
+        border-color: rebeccapurple;
+        padding: 0in;
+        position: absolute;
+        border: aqua 3px solid;
+        border-radius: 20in;
+        border-color: seashell;
+        display: inline-block;
+        width: calc(33.33% - 10px);
+        margin: 0 5px 0;
+        text-align: center;
+        position: center;
+        margin-top:15%;
+        margin-left: 30%;
+        size: 12px;
+    }
+
+    .container{
+        overflow: -moz-hidden-unscrollable;
+        box-sizing: border-box;
+        border-color: rebeccapurple;
+        padding: 0in;
+        position: absolute;
+        border: aqua 3px solid;
+        border-radius: 20in;
+        border-color: seashell;
+        display: inline-block;
+        width: calc(33.33% - 10px);
+        margin: 0 5px 0;
+        text-align: center;
+        position: center;
+        margin-top:15%;
+        margin-left: 30%;
+    }
+    
+    .container p{
+        color: aqua;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        position: center;
+    }
+
+    p{
+        text-align: center;
+        color: rebeccapurple;
+        size: 2px;
+    }
+    input {
+        border-color: aqua;
+        border-style:ridge;
+        border-radius: 20in;
+        size: 2px;
+        -webkit-animation: infinite;
+    }
+
+    .firstname{
+        padding: 0;
+        position: calc(25%,50%);
+    }
+    .lastname{
+        padding:0;
+        position: calc(50%,750%);
+    }
+
+    .container2{
+        padding: 0;
+        position: calc(50%,75%);
+        width: calc(33.33% - 10px);
+        margin: 0 5px 0;
+        margin-top: 40%;
+        text-align: center;
+        margin-top:5%;
+        margin-left: 65%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    </style>
+</head>
+<body>
+    <header><p> :) (the showroom)</p></header>
+    <div class="container">
+        <div class="form">
+            <div class="firstname">
+                <p>FIRSTNAME : </p>
+                <input type="text" id="firstname" placeholder="firstname..." >
+            </div>
+            <div class="lastname">
+                <p> LASTNAME :</p>
+                <input type="text" id="lastname" placeholder="lastname ..">
+            </div>
+            <div class="emalid">
+                <p>email :</p>
+                <input type='email' id="emailid" placeholder="Example@gmail.com">
+            </div>
+            <div class="phonenumber">
+                <p> PHONENUMBER : </p>
+                <input type="phonenumber" id="number" placeholder="phonenumber">
+            </div>
+            <div class="username">
+                <p>@USERNAME</p>
+                <input type="text" id="username" placeholder="@example">
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <img src="/files/images/images.jpg">
+    </div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| THE SHOWROOM |</title>
+    <style>
+    @supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none) {
+            .wp-block-image.is-style-circle-mask img {
+                -webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');
+                mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');
+                mask-mode:alpha;
+                -webkit-mask-repeat:no-repeat;
+                mask-repeat:no-repeat;
+                -webkit-mask-size:contain;
+                mask-size:contain;
+                -webkit-mask-position:center;
+                mask-position:center;
+                border-radius:0
+            }
+        }
+    body{
+        background-color: black  ;
+        color: aquamarine;
+    }
+
+    *{
+        box-sizing: border-box; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .container{
+        overflow: -moz-hidden-unscrollable;
+        box-sizing: border-box;
+        border-color: rebeccapurple;
+        padding: 0in;
+        position: absolute;
+        border: aqua 3px solid;
+        border-radius: 20in;
+        border-color: seashell;
+        display: inline-block;
+        width: calc(33.33% - 10px);
+        margin: 0 5px 0;
+        text-align: center;
+        position: center;
+        margin-top:15%;
+        margin-left: 30%;
+    }
+
+    /* Header styles */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    /* Navigation styles */
+    nav {
+        background-color: #999;
+        color: #fff;
+        padding: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Main content styles */
+    main {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    input[id="username"],[id ="pwd"]{
+        border-color: aqua;
+        border-style:ridge;
+        border-radius: 20in;
+        size: 2px;
+        -webkit-animation: infinite;
+    }
+
+    input[id="logs"],[id="signup"]{
+        border: 10px solid transparent;
+        border-color: solid red;
+        border-radius: 20in;
+        -webkit-animation: infinite;
+        cursor:grab;
+    }
+
+    .lbtn {
+        padding: 0;
+        position: calc(50%,50%);
+        -webkit-text-stroke-color: #333;
+    }
+
+    p{
+        text-align: center;
+        color: rebeccapurple;
+        size: 2px;
+    }
+
+    .container2{
+        padding: 0;
+        position: calc(50%,75%);
+        width: calc(33.33% - 10px);
+        margin: 0 5px 0;
+        margin-top: 40%;
+        text-align: center;
+        margin-top:5%;
+        margin-left: 65%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+    }
+
+    img{
+        height: 500px;
+        width: 500px;
+    }
+    </style>
+
+</head>
+<body>
+    <form>
+    <header><p> :) (the showroom)</p></header>
+    <div class="container">
+        <div class="username">
+            <p>Username :</p>
+            <input type="text, email, number" id="username" name="username" placeholder="enter username ..." />
+        </div>
+        <div class="password">
+            <p>Password :</p>
+            <input id='pwd' type="password" id="password" name="password" placeholder="enter password ..." />
+        </div>
+        <div class="lbtn">
+            <input id=logs type="submit" name="LOGIN" value="LOGIN"/>
+            <input id="signup" type="submit" name="signup" value="SIGNUP"/>
+        </div>
+        <p><a href="/forgotpasswd.html">forgot password ?</a></p>
+    </div>
+    <div class="container2">
+        <img src="/files/images/images.jpg">
+    </div>
+    </form>
+    <script>
+
+        $(document).ready(function() {
+            $('nav').each(function(){
+                var $server1 = $(function(){return MediaError})
+            })
+        })
+        
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", function(event) {
+        event.preventDefault(); // prevent the form from submitting
+  
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        function check(){
+            
+        }
+        if (username === "example" && password === "password123") {
+            alert("Login successful!");
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+        });
+
+        const fs = require('fs');
+
+        // create an object with the login data
+        const loginData = {
+            username: 'exampleuser',
+            password: 'examplepassword'
+        };
+
+        // convert the object to a JSON string
+        const jsonData = JSON.stringify(loginData);
+
+        // write the JSON data to a file
+        fs.writeFile('login-data.json', jsonData, (err) => {
+        if (err) throw err;
+            console.log('Login data saved to file!');
+        });
+
+        fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => console.log(data.ip))
+        .catch(error => console.error(error));
+
+    </script>
+</body>
+</html>
